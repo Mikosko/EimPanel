@@ -1,3 +1,24 @@
-.core-layout__viewport {
-  padding-top: 4rem;
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T11:00:20+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-04T14:25:49+01:00
+
+.toppanel {
+  background-color: #141F3C;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.toppanel__headline {
+  color: #FFF;
+  small {
+    color: #FFF;
+  }
+}
+
+.toppanel__time {
+  font-size: 2em;
+  margin: .5em 0;
+  color: #FFF;
 }

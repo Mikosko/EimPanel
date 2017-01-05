@@ -1,0 +1,29 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T16:25:39+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-04T16:39:00+01:00
+
+@charset "UTF-8";
+
+@font-face {
+	font-family: "streamline-24px-filled-in";
+	src: url('../fonts/streamline-24px-filled-in.eot');
+	src: url('../fonts/streamline-24px-filled-in.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/streamline-24px-filled-in.woff') format('woff'),
+		url('../fonts/streamline-24px-filled-in.ttf') format('truetype');
+}
+
+.streamline {
+  &:before {
+    font-family: "streamline-24px-filled-in" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

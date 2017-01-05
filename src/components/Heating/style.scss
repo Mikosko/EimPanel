@@ -1,0 +1,43 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T16:56:16+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-05T10:53:52+01:00
+
+:local {
+  .text {
+    font-size: 24px;
+    margin: 25px 0 15px;
+  }
+  .state {
+    font-size: 48px;
+    text-transform: uppercase;
+  }
+  .icon {
+    margin: 10px 0;
+    &:before {
+      font-size: 48px;
+      font-family: "streamline-24px-filled-in" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .heating:before {
+    content: "\e084";
+    color: #F69220;
+  }
+  .off:before {
+    content: "\e2d1";
+    color: #FFF;
+  }
+  .downturn:before {
+    content: "\e5be";
+    color: #FFF;
+  }
+}

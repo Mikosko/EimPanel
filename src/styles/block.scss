@@ -1,0 +1,52 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T14:21:10+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-05T16:26:28+01:00
+
+.block {
+  position: relative;
+  display: inline-block;
+  margin: 0px 3px 1px;
+}
+
+.block {
+  overflow: hidden;
+  &-1 {
+    width: 317px;
+    height: 270px;
+  }
+  &-2 {
+    width: 640px;
+    height: 270px;
+  }
+}
+
+.block-offset {
+  padding: 0px 25px;
+}
+
+.block-primary {
+  color: #FFF;
+  background-color: #0C71B9;
+}
+
+.block-grey {
+  color: #FFF;
+  background-color: #4D4D4D;
+}
+
+.block-green {
+  color: #FFF;
+  background-color: #39B54A;
+}
+
+.block-blue {
+  color: #FFF;
+  background-color: #141F3C;
+}
+
+.block-red {
+  color: #FFF;
+  background-color: #D4145A;
+}

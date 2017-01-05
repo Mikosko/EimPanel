@@ -1,3 +1,11 @@
+/**
+* @Author: Miloš Kolčák
+* @Date:   2017-01-04T11:00:20+01:00
+* @Email:  milos.kolcak@gmail.com
+* @Last modified by:   Miloš Kolčák
+* @Last modified time: 2017-01-05T14:13:32+01:00
+*/
+
 // Here is where you can define configuration overrides based on the execution environment.
 // Supply a key to the default export matching the NODE_ENV that you wish to target, and
 // the base configuration will apply your overrides before exporting itself.

@@ -1,0 +1,47 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T16:56:16+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-05T15:48:00+01:00
+
+:local {
+  .title {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 25px 0 15px;
+  }
+
+  .coll {
+    float: left;
+    height: 180px;
+  }
+
+  .value {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  .wrapper {
+    position: relative;
+    height: 120px;
+    border-bottom: 1px #FFF solid;
+  }
+
+  .bar {
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFF;
+    transition: all 2s;
+  }
+
+  .label {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+}

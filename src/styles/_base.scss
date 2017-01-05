@@ -1,12 +1,8 @@
-/*
-Application Settings Go Here
-------------------------------------
-This file acts as a bundler for all variables/mixins/themes, so they
-can easily be swapped out without `core.scss` ever having to know.
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T11:00:20+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-04T16:27:26+01:00
 
-For example:
-
-@import './variables/colors';
-@import './variables/components';
-@import './themes/default';
-*/
+@import './streamline';
+@import './block';

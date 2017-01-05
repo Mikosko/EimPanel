@@ -1,0 +1,25 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T15:55:07+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-05T17:24:12+01:00
+
+:local {
+  .text {
+    font-size: 24px;
+    margin: 95px 0 20px;
+  }
+  .name {
+    font-size: 48px;
+    text-transform: uppercase;
+  }
+  .icon {
+    position: absolute;
+    font-size: 48px;
+    top: 15px;
+    left: 25px;
+    &::before {
+      content: "\e099";
+    }
+  }
+}

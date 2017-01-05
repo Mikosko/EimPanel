@@ -1,0 +1,13 @@
+[{
+  "stateIcon": "heating",
+  "state": "zapnuto",
+  "color": "primary"
+}, {
+  "stateIcon": "off",
+  "state": "vypnuto",
+  "color": "grey"
+}, {
+  "stateIcon": "downturn",
+  "state": "útlum",
+  "color": "green"
+}]
