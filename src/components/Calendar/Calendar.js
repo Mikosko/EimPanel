@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T14:12:58+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-05T11:10:15+01:00
+* @Last modified time: 2017-01-05T18:05:34+01:00
 */
 
 import React from 'react'
@@ -22,8 +22,14 @@ class Calendar extends React.Component {
 
   tick() {
     this.setState({
-      showNameDay: !this.state.showNameDay
+      animationClass : "block-animation"
     })
+    setTimeout(()=>{
+      this.setState({
+        showNameDay: !this.state.showNameDay,
+        animationClass : ""
+      })
+    },1000)
   }
 
   componentDidMount() {

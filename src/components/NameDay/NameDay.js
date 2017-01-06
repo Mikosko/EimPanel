@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T15:32:41+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-05T17:24:23+01:00
+* @Last modified time: 2017-01-05T18:05:19+01:00
 */
 
 import React from 'react'
@@ -33,8 +33,9 @@ class NameDay extends React.Component {
   }
 
   render() {
-    const { currentMonth, currentDate } = this.state
-    return <ComponentWrapper size={1} color="primary" className="text-center">
+    const { currentMonth, currentDate, animationIn } = this.state
+    const { className } = this.props
+    return <ComponentWrapper size={1} color="primary" className={"text-center"}>
         <div className={"streamline " + style.icon}></div>
         <div className={style.text}>dnes má narozeniny</div>
         <div className={style.name}>{NameData[currentMonth][currentDate-1]}</div>
