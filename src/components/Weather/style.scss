@@ -1,0 +1,36 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-04T16:56:16+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-06T10:52:26+01:00
+
+:local {
+  .icon {
+    position: absolute;
+    font-size: 76px;
+    top: 15px;
+    left: 25px;
+  }
+  .text {
+    font-size: 24px;
+  }
+
+  .block {
+    position: absolute;
+    width: 140px;
+    right: 25px;
+    top: 20px;
+
+  }
+  .textRight {
+    float: right;
+  }
+  .value {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    font-size: 64px;
+    text-transform: uppercase;
+  }
+}

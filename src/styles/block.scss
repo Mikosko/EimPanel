@@ -2,14 +2,16 @@
 // @Date:   2017-01-04T14:21:10+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-05T17:59:40+01:00
+// @Last modified time: 2017-01-06T17:24:41+01:00
 
 .block {
   position: relative;
   display: inline-block;
   margin: 0px 3px 1px;
-  transition: all 1s;
-  transform: scale(1);
+}
+.block-small {
+  width: 195px;
+  height: 132px;
 }
 
 .block {
@@ -26,10 +28,6 @@
 
 .block-offset {
   padding: 0px 25px;
-}
-
-.block-animation {
-  transform: scale(0.7);
 }
 
 .block-primary {
@@ -55,4 +53,22 @@
 .block-red {
   color: #FFF;
   background-color: #D4145A;
+}
+
+.infoWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.infoPreloader {
+  bottom: 11px;
+  left: 3px;
+  position: absolute;
+  overflow: hidden;
+  width: 32px;
+  height: 4px;
+  &__bar {
+    height: 22px;
+    background-color: #0C5FB7;
+  }
 }

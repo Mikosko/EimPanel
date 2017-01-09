@@ -3,42 +3,36 @@
 * @Date:   2017-01-04T14:12:58+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-05T18:05:02+01:00
+* @Last modified time: 2017-01-06T14:43:29+01:00
 */
 
 import React from 'react'
 import style from './style.scss'
-import DayData from './Daydata.json'
+import currentDayName from './DayData.json'
 
 import ComponentWrapper from '../ComponentWrapper'
-
-let currentDate = new Date();
-const currentDayName = DayData;
 
 class Day extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      currentDate: currentDate.getDate(),
-      currentDay: currentDayName[currentDate.getDay()]
+      currentDate: 0,
+      currentDay: 0
     };
   }
 
   componentDidMount() {
-    currentDate = new Date();
+    let currentDate = new Date();
     this.setState({
       currentDate: currentDate.getDate(),
       currentDay: currentDayName[currentDate.getDay()]
     })
   }
 
-  componentWillUnmount() {
-   clearInterval(this.interval);
-  }
-
   render() {
-    const {currentDate, currentDay, showName, animationIn} = this.state
-    const { className } = this.props
+    const {currentDate, currentDay, showName} = this.state
+    const { className, progress } = this.props
     return <ComponentWrapper size={1} color="primary" className={"text-center"}>
         <div className={style.dateNumber}>
           {currentDate}.
@@ -46,6 +40,7 @@ class Day extends React.Component {
         <div className={style.dateText}>
           {currentDay}
         </div>
+        <div className={style.progress} style={{width: progress + '%'}}></div>
     </ComponentWrapper>
   }
 }

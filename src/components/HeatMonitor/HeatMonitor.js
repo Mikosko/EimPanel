@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T16:50:39+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-05T17:19:54+01:00
+* @Last modified time: 2017-01-06T18:02:08+01:00
 */
 
 import React from 'react'

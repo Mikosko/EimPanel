@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T11:00:20+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-05T16:46:25+01:00
+* @Last modified time: 2017-01-09T13:34:47+01:00
 */
 
 import React from 'react'
@@ -15,11 +15,12 @@ import TopPanelHeadline from '../../components/TopPanelHeadline'
 
 import Calendar from '../../components/Calendar'
 import Heating from '../../components/Heating'
-import Hints from '../../components/Hints'
 import HeatSaving from '../../components/HeatSaving'
 import Consuption from '../../components/Consuption'
-import HeatMonitor from '../../components/HeatMonitor'
-import WeatherForecast from '../../components/WeatherForecast'
+import InfoBlock from '../../components/InfoBlock'
+import InfoBlockSmall from '../../components/InfoBlockSmall'
+
+import {Link} from 'react-router'
 
 export const CoreLayout = ({ children }) => (
 <div>
@@ -37,8 +38,8 @@ export const CoreLayout = ({ children }) => (
   </div>
   <div className="container">
     <div className="row">
-      <Calendar />
-      <Hints />
+      <InfoBlockSmall />
+      <InfoBlock />
     </div>
     <div className="row">
       <Consuption />
@@ -46,11 +47,6 @@ export const CoreLayout = ({ children }) => (
       <Heating />
     </div>
     <div className="row">
-      <HeatMonitor />
-      <WeatherForecast />
-    </div>
-    <div className="row">
-      <h2>Nástenka</h2>
       <div className='core-layout__viewport'>
         {children}
       </div>

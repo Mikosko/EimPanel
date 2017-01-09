@@ -1,0 +1,47 @@
+// @Author: Miloš Kolčák
+// @Date:   2017-01-06T17:35:43+01:00
+// @Email:  milos.kolcak@gmail.com
+// @Last modified by:   Miloš Kolčák
+// @Last modified time: 2017-01-09T16:37:42+01:00
+
+:local {
+  .block {
+    position: relative;
+    background-color: #CCCCCC;
+    padding: 10px 15px;
+    width: 965px;
+    margin-bottom: 15px;
+    height: 335px;
+  }
+
+  .headline {
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    margin: 0;
+    left: 120px;
+    width: 750px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+
+  .textBlock {
+    width: 850px;
+    height: 265px;
+    margin-top: 10px;
+    overflow-y: hidden;
+  }
+
+  .icon {
+    font-size: 64px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+.post-warning::before {
+  content: '\e026';
+}
