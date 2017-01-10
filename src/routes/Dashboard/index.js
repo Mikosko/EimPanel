@@ -13,9 +13,7 @@ export default (store) => ({
   getComponent (nextState, cb) {
     require.ensure([], (require) => {
       const Dashboard = require('./Dashboard').default
-      const reducer = require('./modules/Dashboard').default
 
-      injectReducer(store, { key: 'Dashboard', reducer })
       cb(null, Dashboard)
 
     }, 'Dashboard')

@@ -2,13 +2,15 @@
 // @Date:   2017-01-04T16:56:16+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-05T15:48:00+01:00
+// @Last modified time: 2017-01-10T15:46:29+01:00
+@import "../styles/variables";
 
 :local {
   .title {
     font-size: 24px;
     text-transform: uppercase;
     margin: 25px 0 15px;
+    font-weight: $font-semibold;
   }
 
   .coll {

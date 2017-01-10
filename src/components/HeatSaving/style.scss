@@ -2,12 +2,14 @@
 // @Date:   2017-01-05T10:52:09+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-05T10:53:58+01:00
+// @Last modified time: 2017-01-10T15:43:45+01:00
+@import "../styles/variables";
 
 :local {
   .text {
     font-size: 24px;
     margin: 25px 0 35px;
+    font-weight: $font-light;
   }
   .value {
     font-size: 64px;

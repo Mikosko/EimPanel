@@ -3,7 +3,7 @@
 * @Date:   2017-01-06T18:02:53+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-09T16:49:05+01:00
+* @Last modified time: 2017-01-10T15:25:08+01:00
 */
 import React from 'react'
 import style from './Poststyle.scss'
@@ -11,14 +11,14 @@ import style from './Poststyle.scss'
 class PostBlock extends React.Component {
   constructor(props) {
     super(props)
-    const { title, text, date, icon } = props
+    const { title, text, date, icon, size } = props
     const DATE = new Date(date)
 
     this.state = {
       title : title,
       text  : text,
       icon  : icon,
-      size  : 1,
+      size  : size,
       date  : {
         year  : DATE.getFullYear(),
         month : DATE.getMonth() + 1,
@@ -48,12 +48,12 @@ class PostBlock extends React.Component {
   }
 
   render() {
-    const {title, text, date, icon} = this.state
+    const {title, text, date, icon, size} = this.state
 
-    return <div className={style.block}>
+    return <div className={style.block} style={{height: (365 * size) + (15 * (size - 1))}}>
       <div className={style.date}>{date.day + "." + date.month + "." +  date.year }</div>
       <h3 className={style.headline}>{title}</h3>
-      <div className={style.textBlock} ref="scrollBox">
+      <div className={style.textBlock} style={{height: (305 * size) + (75 * (size - 1))}} ref="scrollBox">
       <div className={style.text} dangerouslySetInnerHTML={{
         __html: text
       }}></div>

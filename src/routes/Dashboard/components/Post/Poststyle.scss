@@ -2,7 +2,7 @@
 // @Date:   2017-01-06T17:35:43+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-09T16:37:42+01:00
+// @Last modified time: 2017-01-10T14:07:16+01:00
 
 :local {
   .block {
@@ -11,7 +11,7 @@
     padding: 10px 15px;
     width: 965px;
     margin-bottom: 15px;
-    height: 335px;
+    height: 365px;
   }
 
   .headline {
@@ -29,7 +29,7 @@
 
   .textBlock {
     width: 850px;
-    height: 265px;
+    height: 305px;
     margin-top: 10px;
     overflow-y: hidden;
   }
@@ -44,4 +44,7 @@
 
 .post-warning::before {
   content: '\e026';
+}
+.post-info::before {
+  content: "\e100";
 }
