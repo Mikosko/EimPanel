@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T14:12:58+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-06T15:05:07+01:00
+* @Last modified time: 2017-01-10T13:40:24+01:00
 */
 
 import React from 'react'
@@ -35,24 +35,24 @@ class InfoBlock extends React.Component {
   }
 
   componentWillUnmount() {
-   clearInterval(this.interval);
+    clearInterval(this.interval);
   }
 
   render() {
-    const { showBlock } = this.state
-    return <span>
+    const { showBlock, progress } = this.state
+    return <div className="block-wrapper">
       {(() => {switch (showBlock){
         case 0:
-          return <span><Hints /></span>
+          return <Hints />
           break;
         case 1:
-          return <span><HeatMonitor /></span>
+          return <HeatMonitor />
           break;
         case 2:
-          return <span><WeatherForecast /></span>
+          return <WeatherForecast />
           break;
       }})()}
-    </span>
+    </div>
   }
 }
 

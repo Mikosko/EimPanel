@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T15:32:41+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-06T18:02:05+01:00
+* @Last modified time: 2017-01-10T13:29:22+01:00
 */
 
 import React from 'react'
@@ -12,7 +12,7 @@ import Block from './WeatherForecastBlock'
 
 import ComponentWrapper from '../ComponentWrapper'
 
-const WeatherForecastData0 = {
+const WeatherForecastData = {
   symbol  : "°C",
   data    : [
   {
@@ -51,46 +51,7 @@ const WeatherForecastData0 = {
     label: "So"
   }]
 };
-const WeatherForecastData1 = {
-  symbol  : "°C",
-  data    : [
-  {
-    value: 10,
-    icon : "sun-cloud",
-    label: "Ně"
-  },
-  {
-    value: 18,
-    icon : "sun",
-    label: "Po"
-  },
-  {
-    value: 22,
-    icon : "sun",
-    label: "Út"
-  },
-  {
-    value: 24,
-    icon : "sun-cloud",
-    label: "St"
-  },
-  {
-    value: 18,
-    icon : "clouds",
-    label: "Čt"
-  },
-  {
-    value: 15,
-    icon : "sun-cloud",
-    label: "Pá"
-  },
-  {
-    value: 10,
-    icon : "snow",
-    label: "So"
-  }]
-};
-var read = 0;
+
 class WeatherForecast extends React.Component {
 
   constructor(props) {
@@ -103,15 +64,6 @@ class WeatherForecast extends React.Component {
   }
 
   getDataFromAPI() {
-    var WeatherForecastData = {};
-    if(read === 0) {
-      WeatherForecastData = WeatherForecastData0
-      read = 1;
-    } else {
-      WeatherForecastData = WeatherForecastData1
-      read = 0;
-    }
-
     this.setState({
       symbol  : WeatherForecastData.symbol,
       data    : function(){
@@ -125,7 +77,6 @@ class WeatherForecast extends React.Component {
           }
           data.push(obj);
         }
-
         return data;
       }()
     })
@@ -133,11 +84,6 @@ class WeatherForecast extends React.Component {
 
   componentDidMount() {
     this.getDataFromAPI();
-    this.interval = setInterval(() => this.getDataFromAPI(), 10000);
-  }
-
-  componentWillUnmount() {
-   clearInterval(this.interval);
   }
 
   render() {

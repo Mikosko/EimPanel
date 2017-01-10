@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T14:12:58+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-06T14:43:29+01:00
+* @Last modified time: 2017-01-10T13:44:31+01:00
 */
 
 import React from 'react'
@@ -32,7 +32,6 @@ class Day extends React.Component {
 
   render() {
     const {currentDate, currentDay, showName} = this.state
-    const { className, progress } = this.props
     return <ComponentWrapper size={1} color="primary" className={"text-center"}>
         <div className={style.dateNumber}>
           {currentDate}.
@@ -40,7 +39,6 @@ class Day extends React.Component {
         <div className={style.dateText}>
           {currentDay}
         </div>
-        <div className={style.progress} style={{width: progress + '%'}}></div>
     </ComponentWrapper>
   }
 }

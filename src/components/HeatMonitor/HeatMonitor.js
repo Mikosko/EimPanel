@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T16:50:39+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-06T18:02:08+01:00
+* @Last modified time: 2017-01-10T13:45:54+01:00
 */
 
 import React from 'react'
@@ -13,7 +13,7 @@ import Bar from './HeatMonitorBar'
 
 import ComponentWrapper from '../ComponentWrapper'
 
-const HeatMonitorData0 = {
+const HeatMonitorData = {
   symbol  : "Gj",
   data    : [
   {
@@ -46,40 +46,6 @@ const HeatMonitorData0 = {
   }]
 };
 
-const HeatMonitorData1 = {
-  symbol  : "Gj",
-  data    : [
-  {
-    value: 40,
-    label: "Ně"
-  },
-  {
-    value: 38,
-    label: "Po"
-  },
-  {
-    value: 110,
-    label: "Út"
-  },
-  {
-    value: 89,
-    label: "St"
-  },
-  {
-    value: 78,
-    label: "Čt"
-  },
-  {
-    value: 40,
-    label: "Pá"
-  },
-  {
-    value: 2,
-    label: "So"
-  }]
-};
-var read = 0;
-
 class HeatMonitor extends React.Component {
   constructor(props) {
     super(props);
@@ -90,14 +56,6 @@ class HeatMonitor extends React.Component {
     }
   }
   getDataFromAPI() {
-    var HeatMonitorData = {};
-    if(read === 0) {
-      HeatMonitorData = HeatMonitorData0
-      read = 1;
-    } else {
-      HeatMonitorData = HeatMonitorData1
-      read = 0;
-    }
     var highestValue = 0;
     for (let item of HeatMonitorData.data) {
       highestValue = item.value > highestValue ? item.value : highestValue
@@ -124,11 +82,6 @@ class HeatMonitor extends React.Component {
 
   componentDidMount() {
     this.getDataFromAPI();
-    this.interval = setInterval(() => this.getDataFromAPI(), 5000);
-  }
-
-  componentWillUnmount() {
-   clearInterval(this.interval);
   }
 
   render() {

@@ -2,27 +2,6 @@
 // @Date:   2017-01-04T11:00:20+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-06T10:02:00+01:00
+// @Last modified time: 2017-01-10T12:41:46+01:00
 
-.toppanel {
-  background-color: #141F3C;
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-
-.toppanel__headline {
-  padding-left: 45px;
-  color: #FFF;
-  margin-top: 1em;
-  small {
-    color: #FFF;
-  }
-}
-
-.toppanel__time {
-  padding-right: 45px;
-  font-size: 2em;
-  margin: .5em 0;
-  margin-top: 1em;
-  color: #FFF;
-}
+@import '../../styles/variables';

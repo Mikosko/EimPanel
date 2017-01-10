@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T15:32:41+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-06T11:11:12+01:00
+* @Last modified time: 2017-01-10T13:26:40+01:00
 */
 
 import React from 'react'
@@ -39,11 +39,6 @@ class WeatherForecast extends React.Component {
 
   componentDidMount() {
     this.getDataFromAPI();
-    this.interval = setInterval(() => this.getDataFromAPI(), 5000);
-  }
-
-  componentWillUnmount() {
-   clearInterval(this.interval);
   }
 
   render() {

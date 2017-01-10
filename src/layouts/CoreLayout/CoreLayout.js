@@ -3,16 +3,14 @@
 * @Date:   2017-01-04T11:00:20+01:00
 * @Email:  milos.kolcak@gmail.com
 * @Last modified by:   Miloš Kolčák
-* @Last modified time: 2017-01-09T13:34:47+01:00
+* @Last modified time: 2017-01-10T13:09:24+01:00
 */
 
 import React from 'react'
 import style from './CoreLayout.scss'
 import '../../styles/core.scss'
 
-import TopPanelTime from '../../components/TopPanelTime'
-import TopPanelHeadline from '../../components/TopPanelHeadline'
-
+import TopPanel from '../../components/TopPanel'
 import Calendar from '../../components/Calendar'
 import Heating from '../../components/Heating'
 import HeatSaving from '../../components/HeatSaving'
@@ -24,18 +22,7 @@ import {Link} from 'react-router'
 
 export const CoreLayout = ({ children }) => (
 <div>
-  <div className="toppanel">
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-xs-6 text-left">
-          <TopPanelHeadline />
-        </div>
-        <div className="col-xs-6 text-right">
-          <TopPanelTime />
-        </div>
-      </div>
-    </div>
-  </div>
+  <TopPanel />
   <div className="container">
     <div className="row">
       <InfoBlockSmall />
@@ -47,9 +34,7 @@ export const CoreLayout = ({ children }) => (
       <Heating />
     </div>
     <div className="row">
-      <div className='core-layout__viewport'>
-        {children}
-      </div>
+      {children}
     </div>
   </div>
 </div>
