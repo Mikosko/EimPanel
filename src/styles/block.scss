@@ -2,12 +2,13 @@
 // @Date:   2017-01-04T14:21:10+01:00
 // @Email:  milos.kolcak@gmail.com
 // @Last modified by:   Miloš Kolčák
-// @Last modified time: 2017-01-10T13:40:03+01:00
+// @Last modified time: 2017-01-12T16:07:57+01:00
 
 .block {
   position: relative;
   display: inline-block;
   margin: 0px 3px 1px;
+  transition: background-color 1s;
 }
 .block-wrapper {
   display: inline-block;
@@ -21,11 +22,11 @@
 .block {
   overflow: hidden;
   &-1 {
-    width: 317px;
+    width: 334px;
     height: 270px;
   }
   &-2 {
-    width: 640px;
+    width: 674px;
     height: 270px;
   }
 }
